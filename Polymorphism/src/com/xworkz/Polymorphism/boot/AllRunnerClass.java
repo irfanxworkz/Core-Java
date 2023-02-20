@@ -57,6 +57,9 @@ public class AllRunnerClass {
 		AlarmClock alarm=(AlarmClock) clock1;//Casting
 		alarm.getType();
 		
+		/*String was = alarm.getType();
+		System.out.println(was);*/
+		
 		System.out.println("----------------------------------------------------------------------");
 		
 		Garland garland=new Garland();
