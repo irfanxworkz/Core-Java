@@ -1,0 +1,23 @@
+package com.xworkz.Inheritance18.boot;
+import com.xworkz.Inheritance18.thing.Sport;
+import com.xworkz.Inheritance18.thing.T20Cricket;
+import com.xworkz.Inheritance18.thing.Cricket;
+import com.xworkz.Inheritance18.thing.TestCricket;
+import com.xworkz.Inheritance18.thing.ODICricket;
+
+public class Runner 
+{
+	public void display(Sport sport,Cricket cricket,TestCricket testcricket,ODICricket odicricket,T20Cricket t20cricket)
+	{
+		this.display(sport, cricket, testcricket, odicricket, t20cricket);
+	}
+	
+
+	public static void main(String[] args)
+	{
+		Sport sport=new Sport();
+		sport.getTotal(3);
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.xworkz.Object.boot;
+
+import com.xworkz.Object.thing.Paint;
+
+public class AllRunner {
+
+	public static void main(String[] args) 
+	{
+		Paint paint=new Paint();
+		paint.getBrand("Asian Paint");
+		paint.getPrice(5500);
+		paint.getColor("Blue");
+		paint.getQuantity(15);
+		
+		Object obj=new Object();
+
+	}
+
+}

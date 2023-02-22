@@ -1,0 +1,27 @@
+package com.xworkz.Concept.thing;
+
+public class Park 
+{
+	private String parkName;
+	private String location;
+	private int parkSize;
+	private int openTiming;
+	private boolean clean;
+	private boolean playGround;
+	
+	public Park(String parkName,String location,int parkSize,int openTiming,boolean clean,boolean playGround)
+	{
+		this.parkName=parkName;
+		this.location=location;
+		this.parkSize=parkSize;
+		this.openTiming=openTiming;
+		this.clean=clean;
+		this.playGround=playGround;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "[Park name is: "+parkName+"] [park location is: "+location+"] [parksize is: "+size+"] [park Opening time is: "+openTiming+"] [park is clean : "+clean+"] [park has playgpund :"+playGround+"]";
+	}
+}

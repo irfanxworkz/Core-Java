@@ -1,0 +1,55 @@
+package com.xworkz.Concept.thing;
+
+public class Tv 
+{
+	private String brand;
+	private double price;
+	private int size;
+	
+	public Tv(String brand,double price,int size)	
+	{
+		this.brand=brand;
+		this.price=price;
+		this.size=size;
+	}
+	
+	@Override
+	public boolean equals(Object tvv) {
+		
+		System.out.println("Running equals in Tv : "+tvv);
+		if(tvv !=null)
+		{
+			System.out.println("Object is not null...");
+			(tvv instanceof Tv)
+			{
+				System.out.println("Obj is Tv type, compare it...");
+				
+				Tv cast=(Tv) tvv;
+				Tv tv=this;
+				Tv tv1=cast;
+				
+				if(tv.brand.equals(tv1.brand) 
+						&& tv.price==tv1.price
+						&& tv.size==tv1.size)
+				{
+					
+				}
+			}
+			else
+			{
+				System.out.println("obj is not Tv type, not compared it");
+			}
+		}
+		else
+		{
+			System.out.println("tv1 is null");
+		}
+		return super.equals(v1);
+	}
+	
+	@Override
+	public String toString() {
+		System.out.println("Running toString in Tv class...");
+		return "[Brand :"+this.brand+"] [Price :"+price+"] [Size :"+size+"] ";
+	}
+}

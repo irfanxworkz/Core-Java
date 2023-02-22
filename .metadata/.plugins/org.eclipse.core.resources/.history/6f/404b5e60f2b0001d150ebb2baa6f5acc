@@ -1,0 +1,43 @@
+package com.xworkz.Object.thing;
+
+public class Paint
+{
+	private String brand;
+	private double price;
+	private String color;
+	private int quantity;
+	
+	public String getBrand(String brand)
+	{
+		System.out.println("Paint Brand is: "+brand);
+		return this.brand;
+	}
+	
+	public double getPrice(double price)
+	{
+		System.out.println("Paint price is : "+price);
+		return this.price;
+	}
+	
+	public String getColor(String color)
+	{
+		System.out.println("Paint color is :"+color);
+		return this.color;
+	}
+	
+	public int getQuantity(int quantity)
+	{
+		System.out.println("Paint quantity is: "+quantity);
+		return this.quantity;
+	}
+	@Override
+	public int hashCode() {
+		return 333;
+	}
+
+	@Override
+	public String toString() {
+		System.out.println("Running String..........");
+		return this.brand,
+	}
+}

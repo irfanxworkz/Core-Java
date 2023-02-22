@@ -1,0 +1,21 @@
+package com.xworkz.Concept.thing;
+
+public class Tv 
+{
+	private String brand;
+	private double price;
+	private int size;
+	
+	public Tv(String brand,double price,int size)	
+	{
+		this.brand=brand;
+		this.price=price;
+		this.size=size;
+	}
+	
+	@Override
+	public String toString() {
+		System.out.println("Running toString in Tv class...");
+		return "[Brand :"+this.brand+"] [Price :"+price+"] [Size :"+size+"] ";
+	}
+}

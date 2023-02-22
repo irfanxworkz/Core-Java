@@ -1,0 +1,21 @@
+package com.xworkz.Object.thing;
+
+public class Paint
+{
+	private String brand;
+	private double price;
+	private String color;
+	private int quantity;
+	
+	public String getName(String brand)
+	{
+		System.out.println("Paint Brand is: "+brand);
+		return this.brand;
+	}
+	
+	public double getPrice(double price)
+	{
+		System.out.println("Paint price is : "+price);
+		return this.price;
+	}
+}

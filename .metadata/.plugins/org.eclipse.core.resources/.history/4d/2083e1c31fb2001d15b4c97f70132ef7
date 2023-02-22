@@ -1,0 +1,39 @@
+package com.xworkz.Concept.thing;
+
+public class Fridge
+{
+	private String brand; 
+	private double price; //45000
+	private int doors; //2
+	private String features; //Energy Efficiency 
+	private double netWeight; //47
+	private int warranty; //5
+	private String defrost; //Automatic
+	private double totalDepth;//65.5
+	private double totalWidth; //61.8
+	private double totalHeight;//169
+	private String refrigerant; //R134a
+	private String tempratureController; // high ,low, medium
+	
+	public Fridge(String brand, double price ,int door,String features,double netWeight,int warranty,String defrost,double totalDepth,double totalWidth,double totalHeight,String refrigerant,String tempratureController)
+	{
+		this.brand=brand;
+		this.price=price;
+		this.doors=doors;
+		this.features=features;
+		this.netWeight=netWeight;
+		this.warranty=warranty;
+		this.defrost=defrost;
+		this.totalDepth=totalDepth;
+		this.totalWidth=totalWidth;
+		this.totalHeight=totalHeight;
+		this.refrigerant=refrigerant;
+		this.tempratureController=tempratureController;
+	}
+
+	@Override
+	public String toString() {
+			System.out.println("Running toString in Fridge Class...");
+		return "[brand is: "+brand+"] [price is: "+price+" ] [doors are :"+doors+"] [features is: "+features+"] [weight is:"+netWeight+"] [Warranty is: "+warranty+"] [defrost is: "+defrost+"] [depth is :"+totalDepth+"] [TotalWidth"+totalWidth+"] [Height is: "+totalHeight+"] [refrigerant is:"+refrigerant+"] [Temprature Controller is:"+tempratureController;
+	}
+}

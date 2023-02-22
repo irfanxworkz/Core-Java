@@ -1,0 +1,11 @@
+package com.xworkz.Concept.boot;
+
+public class ChiefMinisterRunner {
+
+	public static void main(String[] args) {
+		
+		ChiefMinisterRunner chief1=new ChiefMinisterRunner();
+
+	}
+
+}

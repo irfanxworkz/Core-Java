@@ -1,0 +1,15 @@
+package com.xworkz.Inheritance18.boot;
+
+import com.xworkz.Inheritance18.thing.Converter;
+import com.xworkz.Inheritance18.thing.Sport;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Converter obj=new Converter();
+		obj.display(null, null, null, null);
+		
+
+	}
+
+}

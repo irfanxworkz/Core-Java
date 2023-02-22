@@ -1,0 +1,11 @@
+package com.xworkz.Inheritance18.thing;
+
+public class Converter extends Sport
+{
+	public void display(Sport sport,Cricket cricket,TestCricket testcricket,ODICricket odicricket)
+	{
+		System.out.println("Sport:");
+		this.display(sport, cricket, testcricket, odicricket);
+	}
+
+}

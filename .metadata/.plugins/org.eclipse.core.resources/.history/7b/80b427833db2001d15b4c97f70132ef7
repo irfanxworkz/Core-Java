@@ -1,0 +1,26 @@
+package com.xworkz.Concept.thing;
+
+public class Fish 
+{
+	private String color;
+	private String type; //catfish,salmon
+	private double price;
+	private double weight;
+	private boolean alive;
+	
+	public Fish(String color,String type,double price,double weight,boolean alive)
+	{
+		this.color=color;
+		this.type=type;
+		this.price=price;
+		this.weight=weight;
+		this.alive=alive;
+	}
+	
+	@Override
+	public String toString() {
+			System.out.println("Running tostring in Fish...");
+		return "[color is: "+color+"] [Type is: "+type+"] [Price is : "+price +"] [weight is: "+weight+"]";
+	}
+	
+}

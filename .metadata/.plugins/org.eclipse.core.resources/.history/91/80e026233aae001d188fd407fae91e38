@@ -1,0 +1,99 @@
+package com.xworkz.Polymorphism.boot;
+import com.xworkz.Polymorphism.thing.Baloon;
+import com.xworkz.Polymorphism.thing.Soil;
+import com.xworkz.Polymorphism.thing.RedSoil;
+import com.xworkz.Polymorphism.thing.FoilBaloon;
+import com.xworkz.Polymorphism.thing.AlarmClock;
+import com.xworkz.Polymorphism.thing.Clock;
+import com.xworkz.Polymorphism.thing.Garland;
+import com.xworkz.Polymorphism.thing.RoseGarland;
+import com.xworkz.Polymorphism.thing.Tiger;
+import com.xworkz.Polymorphism.thing.Baby;
+import com.xworkz.Polymorphism.thing.Tubelight;
+import com.xworkz.Polymorphism.thing.LedBulb;
+
+public class AllRunnerClass {
+
+	public static void main(String[] args)
+	{
+		Baloon baloon=new Baloon();
+		baloon.cost();
+		baloon.getDesign();
+		
+		Baloon baloon1 =new FoilBaloon();
+		baloon1.cost();//over-riding method
+		
+		FoilBaloon foil=(FoilBaloon) baloon1;//Casting
+		String shape=foil.getShape();
+		System.out.println("FoilBaloon Shape is: "+shape);
+		
+		System.out.println("----------------------------------------------------------------");
+		
+		Soil soil1=new Soil();
+		soil1.color();
+		String organicMaterial=soil1.getOrganicMaterial();// initializing for solid.getOrganicMaterial();
+		System.out.println("Soil Material is: "+organicMaterial);
+		
+		Soil soil=new RedSoil();
+		String organicMaterial1=soil.getOrganicMaterial();
+		System.out.println("Soil Material is: "+organicMaterial1);
+		soil.color();//over-riding method
+		
+		RedSoil red=(RedSoil) soil; //Casting
+		String material=red.getMaterial();
+		System.out.println("ResSoil Material is : "+material);
+		
+		System.out.println("-------------------------------------------------------------------");
+		
+		Clock clock=new Clock();
+		clock.getShape();
+		clock.getPrice(5500);
+		
+		Clock clock1=new AlarmClock();
+		clock1.getPrice(2500);//over-riding method
+		
+		AlarmClock alarm=(AlarmClock) clock1;//Casting
+		alarm.getType();
+		
+		System.out.println("----------------------------------------------------------------------");
+		
+		Garland garland=new Garland();
+		garland.size(12);
+		garland.price(150);
+		
+		Garland garland1=new RoseGarland();
+		garland1.price(300);//over-riding method
+		
+		RoseGarland rose=(RoseGarland) garland1;//Casting
+		rose.roseQuantity(45);
+		
+		System.out.println("-------------------------------------------------------------------------");
+		
+		Tiger tiger=new Tiger();
+		tiger.color();
+		tiger.size();
+		
+		Tiger tiger1=new Baby();
+		tiger1.size();//over-riding method;
+		
+		Baby baby=(Baby) tiger1;//Casting
+		baby.type();
+		
+		System.out.println("-------------------------------------------------------------------------");
+		 
+		Tubelight tubelight=new Tubelight();
+		tubelight.shape();
+		tubelight.price(150);
+		
+		Tubelight tubelight1=new LedBulb();
+		LedBulb bulb=(LedBulb) tubelight1;
+		bulb.Size();
+		tubelight1.price(250);//over-riding method
+		
+		System.out.println("--------------------------------------------------------------------------");
+		
+				
+		
+	}
+
+}

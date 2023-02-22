@@ -1,0 +1,29 @@
+package com.xworkz.Concept.boot;
+
+import com.xworkz.Concept.thing.Tv;
+
+public class TvRunner {
+
+	public static void main(String[] args) {
+		
+		Tv tv1=new Tv("Samsung",45990,55);
+		System.out.println(tv.toString());
+		
+		Tv tv2=new Tv("Sony",64590,43);
+		System.out.println(tv1);
+		
+		Tv tv3=new Tv("Sony",64590,43);
+		System.out.println(tv3);
+		
+		boolean equals=tv1.equals(tv3);
+		System.out.println(equals);
+		
+		boolean equals1=tv2.equals(tv3);
+		System.out.println(equals1);
+		
+		//boolean equals2=tv3.equals(tv1);
+		//System.out.println(equals2);
+		
+	}
+
+}

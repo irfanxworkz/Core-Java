@@ -1,0 +1,10 @@
+package com.xworkz.Concept.thing;
+
+public class WaterFall 
+{
+	private String  name;
+	private double height;
+	private String location;
+	
+	public WaterFall
+}

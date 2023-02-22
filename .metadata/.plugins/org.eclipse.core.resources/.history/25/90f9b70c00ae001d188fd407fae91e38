@@ -1,0 +1,37 @@
+package com.xworkz.Polymorphism.boot;
+import com.xworkz.Polymorphism.thing.Baloon;
+import com.xworkz.Polymorphism.thing.Soil;
+import com.xworkz.Polymorphism.thing.RedSoil;
+import com.xworkz.Polymorphism.thing.FoilBaloon;
+public class AllRunnerClass {
+
+	public static void main(String[] args)
+	{
+		Baloon baloon=new Baloon();
+		baloon.cost();
+		baloon.getDesign();
+		Baloon baloon1 =new FoilBaloon();
+		baloon1.cost();
+		FoilBaloon foil=(FoilBaloon) baloon1;
+		String shape=foil.getShape();
+		System.out.println("FoilBaloon Shape is: "+shape);
+		
+		System.out.println("----------------------------------------------------------------");
+		
+		Soil soil1=new Soil();
+		soil1.color();
+		soil1.getOrganicMaterial();
+		
+		Soil soil=new RedSoil();
+		soil.getOrganicMaterial();
+		soil.color();
+		RedSoil red=(RedSoil) soil; //soil.getMaterial();
+		String material=red.getMaterial();
+		System.out.println("ResSoil Material is : "+material);
+		
+		
+		
+	
+	}
+
+}

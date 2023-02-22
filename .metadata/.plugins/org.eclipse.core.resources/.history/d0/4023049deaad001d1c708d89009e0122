@@ -1,0 +1,16 @@
+package com.xworkz.Polymorphism.boot;
+import com.xworkz.Polymorphism.thing.Baloon;
+import com.xworkz.Polymorphism.thing.FoilBaloon;
+public class AllRunnerClass {
+
+	public static void main(String[] args)
+	{
+		Baloon baloon=new Baloon();
+		baloon.cost();
+		baloon.getDesign();
+		Baloon baloon1=new FoilBaloon();
+		baloon1.shape();
+		baloon.cost();
+	}
+
+}

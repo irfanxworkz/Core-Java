@@ -1,0 +1,19 @@
+package com.xworkz.Polymorphism.thing;
+
+public class FoilBaloon extends Baloon
+{
+	public FoilBaloon()
+	{
+		System.out.println("no-arg constructor in Foilbaloon class...");
+	}
+	
+	public void shape()
+	{
+		System.out.println("FoilBaloon Shape is: ");
+	}
+	
+	public void cost()
+	{
+		System.out.println("FoilBaloon Cost is: ");
+	}
+}
