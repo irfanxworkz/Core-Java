@@ -1,0 +1,24 @@
+package com.xworkz.abstraction.things;
+
+public class Project1 extends Project {
+
+	@Override
+	void name() {
+		
+		System.out.println("Project name from Over-ride method in Project class");
+		
+	}
+
+	@Override
+	void type() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	void purpose() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.xworkz.abstraction.things;
+
+public abstract class ATM {
+		public abstract void creditAmount(int amount);
+		
+		public abstract void debitAmount();
+       
+
+}

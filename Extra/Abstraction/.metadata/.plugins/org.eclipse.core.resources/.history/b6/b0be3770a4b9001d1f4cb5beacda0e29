@@ -1,0 +1,43 @@
+package com.xworkz.abstraction.things;
+
+public class Even_Odd {
+
+	public static void main(String[] args) {
+
+		int i, m, flag = 0;
+
+		int n = 17;
+
+		if (n % 2 == 0) {
+			System.out.println(n + ": is Even number");
+			int num = n + 1;
+			int square = num * num;
+			System.out.println("Square of " + num + " is :" + square);
+		} else {
+			System.out.println(n + ": is Odd Number");
+			int num = n + 1;
+			int cubes = num * num * n;
+			System.out.println("Cube of " + num + " is :" + cubes);
+		}
+
+		m = n / 2;
+		if (n == 0 || n == 1) {
+			System.out.println(n + ": is not prime number ");
+
+		} else {
+			for (i = 2; i <= m; i++) {
+				if (n % i == 0) {
+					System.out.println(n + ":is not prime number");
+
+					flag = 1;
+					break;
+				}
+			}
+			if (flag == 0) {
+				System.out.println(n + ":is prime number");
+				int square = n * n;
+				System.out.println("Square of " + n + " is :" + square);
+			}
+		}
+	}
+}

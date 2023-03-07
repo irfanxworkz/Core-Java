@@ -1,0 +1,67 @@
+package com.xworkz.abstraction.things;
+
+public class Bank extends ATM{
+
+	@Override
+	public void deposit(int amount) {
+		
+		//this.
+		System.out.println(""+amount);
+		
+	}
+
+	@Override
+	public void withdrawals(int amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void transfer_Fund(double fund) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atm_Pin(int digit) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void acc_Number(long number) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void linked_Aadhar(long aadhar) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void acc_Balance(double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void acc_Type(String type) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cust_Name(String name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cust_Mob_Number(long mobNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

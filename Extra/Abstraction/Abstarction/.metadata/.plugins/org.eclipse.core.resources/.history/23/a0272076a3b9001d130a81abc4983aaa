@@ -1,0 +1,13 @@
+package com.xworkz.abstraction.boot;
+
+import com.xworkz.abstraction.things.Even_Odd;
+
+public class Even_Odd_Runner {
+
+	public static void main(String[] args) {
+		
+		Even_Odd name = new Even_Odd();
+
+	}
+
+}

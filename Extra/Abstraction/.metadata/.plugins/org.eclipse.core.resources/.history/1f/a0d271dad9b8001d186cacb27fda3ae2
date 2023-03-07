@@ -1,0 +1,16 @@
+package com.xworkz.abstraction.boot;
+
+import com.xworkz.abstraction.things.ATM;
+import com.xworkz.abstraction.things.Bank;
+
+public class BankRunner {
+
+	public static void main(String[] args) {
+		
+		ATM atm=new Bank();
+		atm.deposit(25000);
+		
+
+	}
+
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.xworkz.abstraction.things.Project"/>
+    <fullyQualifiedTypeName name="com.xworkz.abstraction.things.Project1"/>
+    <fullyQualifiedTypeName name="com.xworkz.abstraction.things.ATM"/>
+    <fullyQualifiedTypeName name="com.xworkz.abstraction.things.Bank"/>
+    <fullyQualifiedTypeName name="com.xworkz.abstraction.things.Admin"/>
+    <fullyQualifiedTypeName name="com.xworkz.abstraction.things.Even_Odd"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

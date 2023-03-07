@@ -1,0 +1,12 @@
+package com.xworkz.abstraction.things;
+
+public class Bank extends ATM{
+	int amount;
+	@Override
+	public void transferringAmount(int amount) {
+		this.amount=amount;
+		System.out.println("Successfully Transferd :"+amount);
+		
+	}
+
+}

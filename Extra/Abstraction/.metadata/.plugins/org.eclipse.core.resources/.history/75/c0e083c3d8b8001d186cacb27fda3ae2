@@ -1,0 +1,17 @@
+package com.xworkz.abstraction.things;
+
+public class Bank extends ATM{
+	int amount;
+	@Override
+	public void creditAmount(int amount) {
+		this.amount=amount;
+		System.out.println("Successfully Transferd :"+amount);
+		
+	}
+	@Override
+	public void debitAmount(int amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

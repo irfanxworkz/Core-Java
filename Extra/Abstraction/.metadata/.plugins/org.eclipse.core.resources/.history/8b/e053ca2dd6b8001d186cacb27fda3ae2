@@ -1,0 +1,7 @@
+package com.xworkz.abstraction.things;
+
+public abstract class ATM {
+		public abstract void transferringAmount(int amount);
+       
+
+}

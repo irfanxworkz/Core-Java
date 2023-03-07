@@ -1,0 +1,18 @@
+package com.xworkz.StringTask.thing;
+
+public class StringRunner2 {
+
+	public static void main(String[] args) {
+	
+		String str = "ir";
+        try{
+            int number = Integer.parseInt(str);
+            System.out.println(number); // output = 25
+        }
+        catch (NumberFormatException ex){
+            ex.printStackTrace();
+        }
+
+	}
+
+}

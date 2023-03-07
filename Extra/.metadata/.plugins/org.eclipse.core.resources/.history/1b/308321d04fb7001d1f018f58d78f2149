@@ -1,0 +1,106 @@
+package com.xworkz.StringTask.thing;
+
+import java.lang.invoke.MethodHandles.Lookup;
+
+public class StringRunner1 {
+
+
+	public static void main(String[] args) {
+		
+		String str="Sachin";
+		String str1="Irfan Khan";
+		String str2="";
+		String str3="            My Name is Irfan                 k";
+		String str4="my!name!Is!Irfan!Khan";
+		String str5="myTnameTisTRahulTkumar";
+		
+		System.out.println(str);
+		str.concat("Tendulkar"); //concat() method appends the string at the end
+		System.out.println(str); //print Sachin because string are immutable
+		str=str.concat("Tendulkar");////1. concat()
+		System.out.println(str);
+	
+		System.out.println("---------------------------");
+		
+		System.out.println(str.charAt(0));//2. charAt()
+		System.out.println("ASCII value of "+str.charAt(6)+" is: "+str.codePointAt(6)); //3.codePointAt()
+		System.out.println("ASCII Value Of Character which Before "+str.charAt(6)+" is: "+str.codePointBefore(6));//4.codePointBefore()
+		System.out.println(str.codePointCount(1, 6));//5.codePointCount(1, 6)
+		System.out.println(str.compareTo(str1));//6.compareTo()
+		System.out.println(str.compareToIgnoreCase(str1));//7.compareToIgnoreCase(str1)
+		System.out.println("--------------------------------------------------------------");
+		
+		System.out.println(str.contains("SacH"));//8.contains();//true or false
+		System.out.println(str.contentEquals("Sachin"));//9.contentEquals("Sachin")
+		System.out.println(str.contains("Sach"));
+		System.out.println(str.contentEquals("SachinTendulkar"));
+		System.out.println(str.endsWith("lkar"));//10.endsWith();
+		System.out.println(str.equals("SachinTendulka"));//11.equals()
+		System.out.println(str.equalsIgnoreCase("sachintendulkar"));//12.equalsIgnoreCase()
+		System.out.println("-----------------------------------------------------------------");
+		
+		System.out.println(str1.formatted("anything"));//13.formatted()
+		System.out.println("Hashcode of str: "+str+" is: "+str.hashCode());//14.hashCode()
+		System.out.println("Printing after given space:"+str.indent(10));//15.indent();
+		System.out.println(str.indexOf(5));//16.indexOf(5) Not understand this method
+		System.out.println(str.indexOf("Sac"));//output 0 and -1 not understand
+		System.out.println(str.indexOf(str, 5));//Also not understand this method
+		System.out.println("-----------------------------------------------------------------");
+		
+		System.out.println(str1.intern());//17.intern()
+		System.out.println(str2.isBlank());//18.isBlank()
+		System.out.println(str2.isEmpty());//19.isEmpty()
+		System.out.println(str.lastIndexOf("T"));//20.lastIndexof();//not understand
+		System.out.println(str.lastIndexOf(14));
+		System.out.println(str.lastIndexOf("Sachin", 10)); //output is 0 and 1 and -1 not understood this method
+		System.out.println("String str langht is :"+str.length());//21.length()
+		System.out.println("String str1 langht is :"+str1.length());//21.length()
+		System.out.println(str.matches("SachinTendulkar"));//22. matches()
+		System.out.println("------------------------------------------------------------------");
+		
+		System.out.println(str.offsetByCodePoints(1, 10));//23. offsetByCodePoints(0,0) not understood 
+		System.out.println(str.regionMatches(2, str1, 3, 5)); //24.regionMatches(2, str2, 3, 5)
+		System.out.println(str.repeat(3));//25.repeat() method
+		System.out.println(str.replace("Sachin", "Rahul"));//26.replace()
+		System.out.println(str.replaceAll("Sachin", str1)); //27. what is difference b/w replace() and replaceAll()
+		System.out.println(str.replaceFirst("Tendulkar", "jay"));//28. replaceFirst()
+		System.out.println("----------------------------------------------------------");
+		
+		System.out.println(str.startsWith("SachinTe"));//29. startWith()
+		System.out.println(str.startsWith("Ten", 6));//30. startWith(" ",0)
+		
+		System.out.println(str3.strip());//31. strip(); using removing before white space
+		System.out.println(str3.stripIndent());//32. stripIndent(); what is difference strip() and this
+		System.out.println(str3.stripLeading());//33
+		System.out.println(str3.stripTrailing());//34
+		System.out.println(str.substring(13));//35
+		System.out.println(str.substring(6, 15));//36
+		System.out.println(str.toLowerCase());//37
+		System.out.println(str.toUpperCase());//38
+		System.out.println(str3.toUpperCase());//39
+		//System.out.println(str.toCharArray());//40
+		//System.out.println(str.toString());//41
+		//System.out.println(str.translateEscapes());//42
+		System.out.println(str3.trim());//43 trim()// remove space 
+		System.out.println(str2.getClass());//44 getClass();
+		
+		System.out.println("---------------------------------------------------------");
+		System.out.println(str5.split("T"));
+		String[] arr=str4.split("!",4);//45
+		for(String a : arr)
+			System.out.println(a);
+		String[] arr1=str5.split("T");//46
+		for(String a : arr1)
+			System.out.println(a);
+		
+		System.out.println("-----------------------------------------------------");
+		System.out.println(str4.subSequence(2, 10));//47
+		//System.out.println(str.chars());48
+		int code=str4.codePointAt(9);
+		System.out.println(code);//49
+		
+		
+		
+	}
+
+}

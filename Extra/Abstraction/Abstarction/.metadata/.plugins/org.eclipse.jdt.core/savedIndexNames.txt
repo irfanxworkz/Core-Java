@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\irfan khan\Desktop\x-workz\Java\Extra\Abstraction\Abstarction\.metadata\.plugins\org.eclipse.jdt.core
+820814881.index
+1780596766.index
+1865797976.index

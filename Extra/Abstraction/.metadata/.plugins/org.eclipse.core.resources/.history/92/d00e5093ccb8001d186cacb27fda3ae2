@@ -1,0 +1,17 @@
+package com.xworkz.abstraction.boot;
+
+import com.xworkz.abstraction.things.Project;
+import com.xworkz.abstraction.things.Project1;
+
+public class ProjectRunner {
+
+	public static void main(String[] args) {
+		
+		Project pro = new Project1();
+		pro.name();
+		pro.type();
+		pro.purpose();
+
+	}
+
+}

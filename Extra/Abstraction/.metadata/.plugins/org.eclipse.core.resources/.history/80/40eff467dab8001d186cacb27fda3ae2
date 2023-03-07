@@ -1,0 +1,34 @@
+package com.xworkz.abstraction.things;
+
+public abstract class ATM {
+	
+		public int amount,digit;
+		public double fund;
+		public long number,aadhar,mobNumber;
+		public String tpye,name;
+		public abstract void deposit(int amount);
+		
+		public abstract void withdrawals(int amount);
+		
+		public abstract void transfer_Fund(double fund);
+		
+		public abstract void atm_Pin(int digit);
+		
+		public abstract void acc_Number(long number);
+		
+		public abstract void linked_Aadhar(long aadhar);
+		
+		public abstract void acc_Balance();
+		
+		public abstract void acc_Type(String type);
+		
+		public abstract void cust_Name(String name);
+		
+		public abstract void cust_Cont_Number(long mobNumber);
+		
+		
+		
+		
+		
+
+}
