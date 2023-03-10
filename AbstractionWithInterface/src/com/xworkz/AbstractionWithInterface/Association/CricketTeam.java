@@ -5,7 +5,7 @@ import com.xworkz.AbstractionWithInterface.things.CricketRule;
 public class CricketTeam {
 	
 	private String playerName;
-	public CricketRule cricketteam;
+	private CricketRule cricketteam;
 
 	
 	public CricketTeam(CricketRule cricketteam)

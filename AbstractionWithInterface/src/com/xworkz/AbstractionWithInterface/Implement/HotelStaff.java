@@ -6,13 +6,13 @@ public class HotelStaff implements EatingRule {
 
 	@Override
 	public double eatingTime() {
-		
-		return 7;
+		double d1=7;
+		System.out.println("Dinner Time IS :"+d1);
+		return d1;
 	}
 
 	@Override
 	public boolean cleanPlate() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 

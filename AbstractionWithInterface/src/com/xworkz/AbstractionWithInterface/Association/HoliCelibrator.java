@@ -13,8 +13,8 @@ public class HoliCelibrator {
 	
 	public void holiDisplay()
 	{
-		System.out.println("HolyCelibrator "+holirule.dontUse());
-		System.out.println("HolyCelibrator Only Used Natural Color : "+holirule.useNaturalColor());
+		holirule.dontUse();
+		System.out.println("Rule: HolyCelibrator Only Used Natural Color : "+holirule.useNaturalColor());
 	}
 
 }

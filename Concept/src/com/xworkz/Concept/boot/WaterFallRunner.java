@@ -4,8 +4,7 @@ import com.xworkz.Concept.thing.WaterFall;
 
 public class WaterFallRunner {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		WaterFall fall1 = new WaterFall("BalmuriFall", 122, "mysore");
 		System.out.println(fall1);

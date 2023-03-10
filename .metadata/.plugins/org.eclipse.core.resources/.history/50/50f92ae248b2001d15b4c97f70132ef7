@@ -1,9 +1,0 @@
-package com.xworkz.Concept.thing;
-
-public class Alcohol 
-{
-	private String brand;
-	private double percentage;
-	private double price;
-	private String type;
-}

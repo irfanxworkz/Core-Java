@@ -9,10 +9,6 @@ public class DanceRunner {
 	public static void main(String[] args) {
 		
 		DanceCompetitionRule dance=new CompetitionOrganiser();
-		boolean b1=dance.soloDance();
-		System.out.println("Solo Dance Allowed :"+b1);
-		double d1=dance.durationInMin();
-		System.out.println("Dance time Duration "+d1+" Min ");
 		
 		System.out.println("-------------------------------------------");
 		

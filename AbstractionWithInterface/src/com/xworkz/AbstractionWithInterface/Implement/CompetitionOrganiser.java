@@ -12,8 +12,9 @@ public class CompetitionOrganiser implements DanceCompetitionRule {
 
 	@Override
 	public double durationInMin() {
-		
-		return 10;
+		double d1=10;
+		System.out.println("Time Duration For Dance :"+d1+"Min");
+		return d1;
 	}
 
 }

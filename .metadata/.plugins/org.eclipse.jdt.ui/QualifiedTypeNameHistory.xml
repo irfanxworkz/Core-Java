@@ -20,4 +20,21 @@
     <fullyQualifiedTypeName name="com.xworkz.Concept.thing.Cake"/>
     <fullyQualifiedTypeName name="com.xworkz.Concept.thing.WaterFall"/>
     <fullyQualifiedTypeName name="com.xworkz.Concept.thing.Alcohol"/>
+    <fullyQualifiedTypeName name="com.xworkz.Hirarchical.thing.Engineer"/>
+    <fullyQualifiedTypeName name="com.xworkz.Hirarchical.thing.Doctor"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.xworkz.LearnException.thing.StackCreater"/>
+    <fullyQualifiedTypeName name="com.xworkz.Multiple_Inheritance.implement.Codes"/>
+    <fullyQualifiedTypeName name="com.xworkz.Multiple_Inheritance.things.DubaiVisaRule"/>
+    <fullyQualifiedTypeName name="com.xworkz.Multiple_Inheritance.things.PassportRule"/>
+    <fullyQualifiedTypeName name="com.xworkz.Multiple_Inheritance.things.Developer"/>
+    <fullyQualifiedTypeName name="com.xworkz.Multiple_Inheritance.things.AbstractInfo"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.xworkz.Interface.implement.AllCodes"/>
+    <fullyQualifiedTypeName name="com.xworkz.Interface.things.CodingRule"/>
+    <fullyQualifiedTypeName name="com.xworkz.Interface.things.FamilyRule"/>
+    <fullyQualifiedTypeName name="com.xworkz.Interface.things.HospitalRule"/>
+    <fullyQualifiedTypeName name="com.xworkz.Interface.things.PubRule"/>
+    <fullyQualifiedTypeName name="com.xworkz.Interface.things.RailwayStation"/>
 </qualifiedTypeNameHistroy>

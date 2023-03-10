@@ -9,11 +9,6 @@ public class CricketRunner {
 	public static void main(String[] args) {
 		
 		CricketRule cricketRule=new CricketBoard(); //Is-A relation
-		boolean b=cricketRule.noBall();
-		System.out.println("Ball is NoBall :"+b);
-		
-		boolean b1=cricketRule.out();
-		System.out.println("Player is Out: "+b1);
 		
 		System.out.println("--------------------------------------------------------");
 		

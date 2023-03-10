@@ -13,9 +13,8 @@ public class Costumer {
 	
 	public void food()
 	{
-		double d1=eating.eatingTime();
-		System.out.println("Dinner Time Is : "+d1+" PM");
-		
-		System.out.println("Plate is Clean :"+eating.cleanPlate());
+		eating.eatingTime();
+		boolean b1=eating.cleanPlate();
+		System.out.println("Plate is Clean :"+b1);
 	}
 }

@@ -6,14 +6,16 @@ public class ExamBoard implements ExamRule{
 
 	@Override
 	public double minPassingMark() {
-		
-		return 40;
+		double d1=40;
+		System.out.println("Min Passing Marks Is: "+d1);
+		return d1;
 	}
 
 	@Override
 	public double examTiming() {
-
-		return 3;
+		double d1=3;
+		System.out.println("Exam Time Is: "+d1);
+		return d1;
 	}
 
 }

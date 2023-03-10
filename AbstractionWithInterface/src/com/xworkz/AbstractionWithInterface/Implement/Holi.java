@@ -6,8 +6,9 @@ public class Holi implements HoliRule{
 
 	@Override
 	public String dontUse() {
-		
-		return "Don't Use Egg, Ink and Other Harmful Material";
+		String str="Don't Use Egg, Ink and Other Harmful Material";
+		System.out.println("Rule: "+str);
+		return str;
 	}
 
 	@Override

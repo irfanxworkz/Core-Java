@@ -1,9 +1,0 @@
-package com.xworkz.Concept.boot;
-
-import com.xworkz.Concept.thing.Fridge;
-
-public class FridgeRunner 
-{
-	Fridge fridge1=new Fridge("LG",45000,2,"Enegy Efficiency",47,5,"Automatic",65.5,61.8,169,"R134a","High");
-	System.out.println(fridge1)
-}

@@ -9,11 +9,8 @@ public class EatingRuleRunner {
 	public static void main(String[] args) {
 		
 		EatingRule eating=new HotelStaff();
-		System.out.println("Dinner Time is : "+eating.eatingTime()+" PM"); 
-		System.out.println("Plate is Clean : "+eating.cleanPlate());
 		
 		System.out.println("------------------------------------------------");
-		
 		Costumer costumer=new Costumer(eating);
 		costumer.food();
 

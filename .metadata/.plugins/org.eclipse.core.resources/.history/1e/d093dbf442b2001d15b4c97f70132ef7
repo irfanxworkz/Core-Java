@@ -1,9 +1,0 @@
-package com.xworkz.Concept.thing;
-
-public class Cake 
-{
-	private String flower;
-	private double weight;
-	private String shape;
-	private double price;
-}
