@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import com.xworkz.application_development.dto.TravelDTO;
+import com.xworkz.application_development.dto.TravelDTO;
 
 public class TravelDTORunner {
 
@@ -17,7 +18,8 @@ public class TravelDTORunner {
 		travel.setDistance(250);
 		
 		System.out.println(travel);
-
+		System.out.println(travel.hashCode()+" Original Hashcode "+System.identityHashCode(travel));
+		System.out.println(travel.equals(travel));
 	}
 
 }

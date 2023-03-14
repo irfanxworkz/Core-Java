@@ -2,6 +2,7 @@ package com.xworkz.application_development.dto;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 /* 5. Rules
 1. implements Serializable
@@ -29,6 +30,30 @@ public class ApplicationDTO implements Serializable{
 	public String toString() {
 		return "ApplicationDTO: [name=" + name + "], [developedBy=" + developedBy + "] , [createdDate=" + createdDate
 				+ "] , [ size=" + size + "] ,[ version=" + version + "]";
+	}
+
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(createdDate, developedBy, name, size, version);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ApplicationDTO other = (ApplicationDTO) obj;
+		return Objects.equals(createdDate, other.createdDate) && Objects.equals(developedBy, other.developedBy)
+				&& Objects.equals(name, other.name)
+				&& Double.doubleToLongBits(size) == Double.doubleToLongBits(other.size)
+				&& Double.doubleToLongBits(version) == Double.doubleToLongBits(other.version);
 	}
 
 

@@ -17,6 +17,8 @@ public class ApplicationDTORunner {
 		String str=applicationDto.getName();
 		System.out.println("Application Name is :"+str);
 		System.out.println(applicationDto);
+		System.out.println(applicationDto.hashCode()+" Original Hashcode "+System.identityHashCode(applicationDto));
+		System.out.println(applicationDto.equals(applicationDto));
 	}
 
 }

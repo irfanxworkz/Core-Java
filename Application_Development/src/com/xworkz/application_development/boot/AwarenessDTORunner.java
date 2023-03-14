@@ -16,6 +16,8 @@ public class AwarenessDTORunner {
 		awareness.setFocus(true);
 		
 		System.out.println(awareness);
+		System.out.println(awareness.hashCode()+" Original Hashcode "+System.identityHashCode(awareness));
+		System.out.println(awareness.equals(awareness));
 		
 
 	}

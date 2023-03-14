@@ -2,6 +2,7 @@ package com.xworkz.application_development.dto;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class AttendanceDTO implements Serializable{
 	
@@ -18,6 +19,26 @@ public class AttendanceDTO implements Serializable{
 	public String toString() {
 		return "AttendanceDTO: [candidateName=" + candidateName + ", present=" + present + ", date=" + date + ", absent="
 				+ absent + "]";
+	}
+	
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(absent, candidateName, date, present);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AttendanceDTO other = (AttendanceDTO) obj;
+		return absent == other.absent && Objects.equals(candidateName, other.candidateName)
+				&& Objects.equals(date, other.date) && present == other.present;
 	}
 
 	public String getCandidateName() {

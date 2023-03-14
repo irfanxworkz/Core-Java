@@ -3,6 +3,7 @@ package com.xworkz.application_development.dto;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class AwarenessDTO implements Serializable {
 	
@@ -21,6 +22,28 @@ public class AwarenessDTO implements Serializable {
 	public String toString() {
 		return "AwarenessDTO [NameOfAwareness=" + NameOfAwareness + ", typesOfAwareness=" + typesOfAwareness
 				+ ", timePeriod=" + timePeriod + ", focus=" + focus + "]";
+	}
+
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(NameOfAwareness, focus, timePeriod, typesOfAwareness);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AwarenessDTO other = (AwarenessDTO) obj;
+		return Objects.equals(NameOfAwareness, other.NameOfAwareness) && focus == other.focus
+				&& Objects.equals(timePeriod, other.timePeriod) && typesOfAwareness == other.typesOfAwareness;
 	}
 
 

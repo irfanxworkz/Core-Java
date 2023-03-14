@@ -3,6 +3,7 @@ package com.xworkz.application_development.dto;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class TravelDTO implements Serializable{
 	
@@ -21,6 +22,30 @@ public class TravelDTO implements Serializable{
 	public String toString() {
 		return "TravelDTO: [routeName=" + routeName + ", Ticket Cost Rs:" + cost + ", currentDateTime=" + currentDateTime + ", distance="
 				+ distance + "]";
+	}
+
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cost, currentDateTime, distance, routeName);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TravelDTO other = (TravelDTO) obj;
+		return Double.doubleToLongBits(cost) == Double.doubleToLongBits(other.cost)
+				&& Objects.equals(currentDateTime, other.currentDateTime)
+				&& Double.doubleToLongBits(distance) == Double.doubleToLongBits(other.distance)
+				&& Objects.equals(routeName, other.routeName);
 	}
 
 

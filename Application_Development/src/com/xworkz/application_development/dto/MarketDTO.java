@@ -1,6 +1,7 @@
 package com.xworkz.application_development.dto;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class MarketDTO implements Serializable{
 	
@@ -24,6 +25,29 @@ public class MarketDTO implements Serializable{
 	public String toString() {
 		return "MarketDTO: [nameOfMarket=" + nameOfMarket + ", typeOfMarket=" + typeOfMarket + ", areaOfMarket="
 				+ areaOfMarket + ", numberOfStore=" + numberOfStore + ", location=" + location + "]";
+	}
+
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(areaOfMarket, location, nameOfMarket, numberOfStore, typeOfMarket);
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MarketDTO other = (MarketDTO) obj;
+		return Double.doubleToLongBits(areaOfMarket) == Double.doubleToLongBits(other.areaOfMarket)
+				&& Objects.equals(location, other.location) && Objects.equals(nameOfMarket, other.nameOfMarket)
+				&& numberOfStore == other.numberOfStore && Objects.equals(typeOfMarket, other.typeOfMarket);
 	}
 
 

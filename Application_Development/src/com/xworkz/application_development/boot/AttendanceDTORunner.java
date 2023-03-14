@@ -15,6 +15,8 @@ public class AttendanceDTORunner {
 		attendance.setAbsent(false);
 		
 		System.out.println(attendance);
+		System.out.println(attendance.hashCode()+" Original Hashcode "+System.identityHashCode(attendance));
+		System.out.println(attendance.equals(attendance));
 	}
 
 }

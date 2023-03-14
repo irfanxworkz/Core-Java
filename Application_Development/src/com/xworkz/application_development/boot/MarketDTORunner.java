@@ -15,6 +15,8 @@ public class MarketDTORunner {
 		market.setLocation("Malleshwaram Bengaluru, Karnata 560003");
 		
 		System.out.println(market);
+		System.out.println(market.hashCode()+" Original Hashcode "+System.identityHashCode(market));
+		System.out.println(market.equals(market));
 	}
 
 }
