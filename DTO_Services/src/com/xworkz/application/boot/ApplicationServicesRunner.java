@@ -1,13 +1,13 @@
-package com.xworkz.application.services.boot;
+package com.xworkz.application.boot;
 
 import java.time.LocalDate;
 
-import com.xworkz.application.application.dto.ApplicationDTO;
-import com.xworkz.application.application.dto.LangUsed;
-import com.xworkz.application.application.dto.OsTypeSupported;
-import com.xworkz.application.application.dto.Type;
+import com.xworkz.application.constant.LangUsed;
+import com.xworkz.application.constant.OsTypeSupported;
+import com.xworkz.application.constant.Type;
+import com.xworkz.application.dto.ApplicationDTO;
 import com.xworkz.application.services.ApplicationServices;
-import com.xworkz.application.services.imp.ApplicationServicesImp;
+import com.xworkz.application.services.ApplicationServicesImp;
 
 public class ApplicationServicesRunner {
 
@@ -21,7 +21,7 @@ public class ApplicationServicesRunner {
 
 		applicationDTO.setVersion(274.4);
 
-		applicationDTO.setSize(3);
+		applicationDTO.setSize(10);
 
 		applicationDTO.setPrice(225);
 
@@ -60,7 +60,6 @@ public class ApplicationServicesRunner {
 		ApplicationServices applicationServices = new ApplicationServicesImp();
 		boolean validate = applicationServices.validAndSave(applicationDTO);
 		System.out.println("Validate: " + validate);
-
 	}
 
 }

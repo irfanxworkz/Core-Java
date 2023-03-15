@@ -1,12 +1,11 @@
-package com.xworkz.application.services.imp;
+package com.xworkz.application.services;
 
 import java.time.LocalDate;
 
-import com.xworkz.application.application.dto.ApplicationDTO;
-import com.xworkz.application.application.dto.LangUsed;
-import com.xworkz.application.application.dto.OsTypeSupported;
-import com.xworkz.application.application.dto.Type;
-import com.xworkz.application.services.ApplicationServices;
+import com.xworkz.application.constant.LangUsed;
+import com.xworkz.application.constant.OsTypeSupported;
+import com.xworkz.application.constant.Type;
+import com.xworkz.application.dto.ApplicationDTO;
 
 public class ApplicationServicesImp implements ApplicationServices {
 
@@ -212,7 +211,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 			
 			if (noOfDownload >0 && noOfDownload<100) {
 				System.out.println("noOfDownload is valid....");
-				validInternetNeeded = true;
+				validNoOfDownloads = true;
 			} 
 			else {
 				System.err.println("noOfDownload is inValid...");
@@ -225,7 +224,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 			else {
 				System.out.println("validate not Complete not save data ");
 			}
-			return true;
+			return false;
 		}
 
 		else {
