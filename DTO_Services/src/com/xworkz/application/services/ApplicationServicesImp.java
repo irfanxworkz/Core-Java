@@ -6,8 +6,21 @@ import com.xworkz.application.constant.LangUsed;
 import com.xworkz.application.constant.OsTypeSupported;
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.repository.ApplicationRepository;
+
+import static com.xworkz.application.util.ValidationUtil.*;
 
 public class ApplicationServicesImp implements ApplicationServices {
+	
+	private ApplicationRepository applicationRepository;
+	
+	
+
+	public ApplicationServicesImp(ApplicationRepository applicationRepository) {
+		this.applicationRepository = applicationRepository;
+	}
+
+
 
 	@Override
 	public boolean validAndSave(ApplicationDTO dto) {
@@ -32,8 +45,8 @@ public class ApplicationServicesImp implements ApplicationServices {
 			LocalDate firstVersionReleaseDate = dto.getFirstVersionReleaseDate();
 			LocalDate nextVersionReleaseDate = dto.getNextVersionReleaseDate();
 			int trialDays = dto.getTrialDays();
-			boolean internetNeeded = dto.isInternetNeeded();
 			int noOfDownload = dto.getNoOfDownloads();
+			boolean internetNeeded = dto.isInternetNeeded();
 
 			boolean validName = false;
 			boolean validDevelopedBy = false;
@@ -55,7 +68,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 			boolean validInternetNeeded = false;
 			boolean validNoOfDownloads = false;
 
-			if (name != null && !name.isEmpty() && name.length() > 3 && name.length() < 20) {
+			if (validString(name)) {
 				System.out.println("Name is valid...");
 				validName = true;
 			} 
@@ -63,8 +76,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("name is Invalid");
 			}
 			
-			if (developedBy != null && !developedBy.isEmpty() && developedBy.length() > 3
-					&& developedBy.length() < 30) {
+			if (validString(developedBy)) {
 				System.out.println("DevelopedBy is valid...");
 				validDevelopedBy = true;
 			} 
@@ -72,7 +84,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("DevelopedBy is Invalid...");
 			}
 			
-			if (version > 0 && version < 300) {
+			if (validVersion(version)) {
 				System.out.println("Version is valid....");
 				validVersion = true;
 			} 
@@ -80,7 +92,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("Version is inValid...");
 			}
 			
-			if (size > 0 && size < 5) {
+			if (validSize(size)) {
 				System.out.println("size is valid....");
 				validSize = true;
 			} 
@@ -88,7 +100,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("size is inValid...");
 			}
 			
-			if (price > 0 && price < 1000) {
+			if (validPrice(price)) {
 				System.out.println("price is valid....");
 				validPrice = true;
 			}
@@ -96,7 +108,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("price is inValid...");
 			}
 			
-			if (minProcessorSpeed > 0 && minProcessorSpeed < 332) {
+			if (validMinProcessorSpeed(minProcessorSpeed)) {
 				System.out.println("minProcessorSpeed is valid....");
 				validMinProcessorSpeed = true;
 			} 
@@ -104,7 +116,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("minProcessorSpeed is inValid...");
 			}
 			
-			if (minRamSpaceRequired > 0 && minRamSpaceRequired < 500) {
+			if (validMinRamSpaceRequired(minRamSpaceRequired)) {
 				System.out.println("minRamSpaceRequired is valid....");
 				validMinRamSpaceRequired = true;
 			} 
@@ -112,7 +124,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("minRamSpaceRequired is inValid...");
 			}
 			
-			if (rating > 3 && rating < 6) {
+			if (validRating(rating)) {
 				System.out.println("rating is valid....");
 				validRating = true;
 			} 
@@ -120,7 +132,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("rating is inValid...");
 			}
 			
-			if (ageLimit > 16 && ageLimit < 45) {
+			if (validAgeLimit(ageLimit)) {
 				System.out.println("ageLimit is valid....");
 				validAgeLimit = true;
 			}
@@ -152,10 +164,8 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("osTypeSupportsd is inValid...");
 			}
 			
-			LocalDate tomorrow = LocalDate.now().plusDays(1);
-			LocalDate createDate = LocalDate.of(2009, 10, 6);
 			
-			if (createdDate !=null && createdDate.isBefore(tomorrow) && createdDate.isAfter(createDate)) {
+			if (validCreatedDate(createdDate)) {
 				System.out.println("createdDate is valid....");
 				validCreatedDate = true;
 			} 
@@ -163,9 +173,8 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("createdDate is inValid...");
 			}
 			
-			LocalDate currentVersionDate= LocalDate.of(2023, 3, 12);
 			
-			if (currentVersionReleaseDate !=null && currentVersionReleaseDate.equals(currentVersionDate)) {
+			if (validCurrentVersionReleaseDate(currentVersionReleaseDate)) {
 				System.out.println("currentVersionReleaseDate is valid....");
 				validCurrentVersionReleaseDate = true;
 			}
@@ -173,9 +182,9 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("currentVersionReleaseDate is inValid...");
 			}
 			
-			LocalDate firstVersionDate = LocalDate.of(2010, 10, 6);
 			
-			if (firstVersionReleaseDate !=null && firstVersionReleaseDate.equals(firstVersionDate)) {
+			
+			if (validFirstVersionReleaseDate(firstVersionReleaseDate)) {
 				System.out.println("firstVersionReleaseDate is valid....");
 				validFirstVersionReleaseDate = true;
 			} 
@@ -183,9 +192,9 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("firstVersionReleaseDate is inValid...");
 			}
 			
-			LocalDate nextVersionDate= LocalDate.of(2023, 10, 06);
 			
-			if (nextVersionReleaseDate !=null && nextVersionReleaseDate.equals(nextVersionDate)) {
+			
+			if (validNextVersionReleaseDate(nextVersionReleaseDate)) {
 				System.out.println("nextVersionReleaseDate is valid....");
 				validNextVersionReleaseDate = true;
 			}
@@ -193,7 +202,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("nextVersionReleaseDate is inValid...");
 			}
 			
-			if (trialDays >0 && trialDays<35) {
+			if (validTrialDays(trialDays)) {
 				System.out.println("trialDays is valid....");
 				validTrialDays = true;
 			}
@@ -201,15 +210,7 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("trialDays is inValid...");
 			}
 			
-			if (internetNeeded==true) {
-				System.out.println("internetNeeded is valid....");
-				validInternetNeeded = true;
-			} 
-			else {
-				System.err.println("internetNeeded is inValid...");
-			}
-			
-			if (noOfDownload >0 && noOfDownload<100) {
+			if (validNoOfDownload(noOfDownload)) {
 				System.out.println("noOfDownload is valid....");
 				validNoOfDownloads = true;
 			} 
@@ -217,9 +218,19 @@ public class ApplicationServicesImp implements ApplicationServices {
 				System.err.println("noOfDownload is inValid...");
 			}
 			
-			if(validName == true && validDevelopedBy == true && validVersion == true && validSize == true && validPrice == true && validMinProcessorSpeed == true && validMinRamSpaceRequired == true && validRating == true && validAgeLimit == true && validType == true && validLangUsed == true && validOsTypeSupportsd == true && validCreatedDate == true && validCurrentVersionReleaseDate == true && validFirstVersionReleaseDate == true && validNextVersionReleaseDate == true && validTrialDays == true && validInternetNeeded == true && validNoOfDownloads == true) {
+			if (internetNeeded) {
+				System.out.println("internetNeeded is valid....");
+				validInternetNeeded = true;
+			} 
+			else {
+				System.err.println("internetNeeded is inValid...");
+			}
+			
+			
+			if(validFlag(validName, validDevelopedBy, validVersion, validSize, validPrice, validMinProcessorSpeed, validMinRamSpaceRequired, validRating, validAgeLimit, validType, validLangUsed, validOsTypeSupportsd, validCreatedDate, validCurrentVersionReleaseDate, validFirstVersionReleaseDate, validNextVersionReleaseDate, validTrialDays, validInternetNeeded, validNoOfDownloads)) {
 				System.out.println("Validate Complete Data Save....");
-				return true;
+				boolean saved=applicationRepository.save(dto);
+				return saved;
 			}
 			else {
 				System.out.println("validate not Complete not save data ");

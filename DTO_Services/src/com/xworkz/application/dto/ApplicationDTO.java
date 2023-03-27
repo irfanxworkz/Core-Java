@@ -23,6 +23,36 @@ public class ApplicationDTO  implements Serializable {
 		System.out.println("no-arg Constructor in ApplicationDTO ");
 	}
 
+	
+
+	public ApplicationDTO(String name, String developedBy, double version, double size, double price,
+			double minProcessorSpeed, double minRamSpaceRequired, double ageLimit, double rating, Type type,
+			OsTypeSupported osTypeSupportsd, LangUsed langUsed, LocalDate createdDate,
+			LocalDate firstVersionReleaseDate, LocalDate currentVersionReleaseDate, LocalDate nextVersionReleaseDate,
+			boolean internetNeeded, int noOfDownloads, int trialDays) {
+		super();
+		this.name = name;
+		this.developedBy = developedBy;
+		this.version = version;
+		this.size = size;
+		this.price = price;
+		this.minProcessorSpeed = minProcessorSpeed;
+		this.minRamSpaceRequired = minRamSpaceRequired;
+		this.ageLimit = ageLimit;
+		this.rating = rating;
+		this.type = type;
+		this.osTypeSupportsd = osTypeSupportsd;
+		this.langUsed = langUsed;
+		this.createdDate = createdDate;
+		this.firstVersionReleaseDate = firstVersionReleaseDate;
+		this.currentVersionReleaseDate = currentVersionReleaseDate;
+		this.nextVersionReleaseDate = nextVersionReleaseDate;
+		this.internetNeeded = internetNeeded;
+		this.noOfDownloads = noOfDownloads;
+		this.trialDays = trialDays;
+	}
+
+
 
 	public String getName() {
 		return name;
