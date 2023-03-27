@@ -6,10 +6,18 @@ import com.xworkz.headphone.constant.Brand;
 import com.xworkz.headphone.constant.Color;
 import com.xworkz.headphone.constant.TypeAndWeight;
 import com.xworkz.headphone.dto.HeadphoneDTO;
-import com.xworkz.headphone.util.ValidationUtil;
+import com.xworkz.headphone.repository.HeadphoneRepository;
+
+import static com.xworkz.headphone.util.ValidationUtil.*;
 
 public class HeadphoneServicesImpl implements HeadphoneServices {
 
+	private HeadphoneRepository headphoneRepositry;
+	
+	public HeadphoneServicesImpl(HeadphoneRepository headphoneRepository) {
+		this.headphoneRepositry=headphoneRepository;
+	}
+	
 	@Override
 	public boolean validateAndThenSave(HeadphoneDTO dto) {
 		
@@ -63,7 +71,7 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				System.err.println("TypeAndWeight is invalid");
 			}
 			
-			if(ValidationUtil.validString(modelNo)) {
+			if(validString(modelNo)) {
 				System.out.println("ModelNo is valid");
 				validModelNo=true;
 				
@@ -72,7 +80,7 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				
 				System.err.println("ModelNo is Invalid");
 			}
-			if(ValidationUtil.validString(customerName)) {
+			if(validString(customerName)) {
 				System.out.println("CustomerName is valid");
 				validCustomerName=true;
 				
@@ -81,7 +89,7 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				
 				System.err.println("CustomerName is Invalid");
 			}
-			if(ValidationUtil.validInt(invoiceNo)) {
+			if(validInt(invoiceNo)) {
 				System.out.println("InvoiceNo is valid");
 				validInvoiceNo=true;
 				
@@ -90,7 +98,7 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				
 				System.err.println("InvoiceNo is Invalid");
 			}
-			if(ValidationUtil.validInt(warrantyPeriod)) {
+			if(validInt(warrantyPeriod)) {
 				System.out.println("WarrantyPeriod is valid");
 				validWarrantyPeriod=true;
 				
@@ -99,7 +107,7 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				
 				System.err.println("WarrantyPeriod is Invalid");
 			}
-			if(ValidationUtil.validDouble(price)) {
+			if(validDouble(price)) {
 				System.out.println("Price is valid");
 				validPrice=true;
 				
@@ -117,7 +125,7 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				
 				System.err.println("Bass is Invalid");
 			}
-			if(ValidationUtil.validDate(mfgDate)) {
+			if(validDate(mfgDate)) {
 				System.out.println("mfgDate is valid");
 				validMfgDate=true;
 				
@@ -127,12 +135,15 @@ public class HeadphoneServicesImpl implements HeadphoneServices {
 				System.err.println("mfgDate is Invalid");
 			}
 			
-			if(ValidationUtil.valigFlag(validBrand,validColor,validTypeAndWeight,validModelNo,validCustomerName,validInvoiceNo,validWarrantyPeriod,validPrice,validBass,validMfgDate)) {
+			if(valigFlag(validBrand,validColor,validTypeAndWeight,validModelNo,validCustomerName,validInvoiceNo,validWarrantyPeriod,validPrice,validBass,validMfgDate)) {
 				System.out.println("Validation is complete save data ");
+				boolean saved=headphoneRepositry.save(dto);
+				return saved;
 				
 			}
 			else {
 				System.err.println("Validation is not complete not save data");
+				return false;
 			}
 			
 			
