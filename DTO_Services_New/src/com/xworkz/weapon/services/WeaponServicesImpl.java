@@ -4,8 +4,17 @@ import java.time.LocalDate;
 
 import com.xworkz.weapon.constant.Type;
 import com.xworkz.weapon.dto.WeaponDTO;
+import com.xworkz.weapon.repository.WeaponRepository;
+
+import static com.xworkz.weapon.util.ValidationUtil.*;
 
 public class WeaponServicesImpl implements WeaponServices{
+	
+	private WeaponRepository weaponRepository;
+
+	public WeaponServicesImpl(WeaponRepository weaponRepository) {
+		this.weaponRepository = weaponRepository;
+	}
 
 	@Override
 	public boolean validateAndThenSave(WeaponDTO dto) {
@@ -38,63 +47,63 @@ public class WeaponServicesImpl implements WeaponServices{
 			boolean validType=false;
 			boolean validManufacturedYear=false;
 			
-			if(name !=null && name.length()>3 && name.length()<30) {
+			if(validString(name)) {
 				System.out.println("Name is Valid");
 				validName=true;
 			}
 			else {
 				System.err.println("Name is InValid ");
 			}
-			if(material !=null && material.length()>3 && material.length()<30) {
+			if(validString(material)) {
 				System.out.println("material is Valid");
 				validMaterial=true;
 			}
 			else {
 				System.err.println("material is InValid ");
 			}
-			if(madeBy !=null && madeBy.length()>3 && madeBy.length()<50) {
+			if(validString(madeBy)) {
 				System.out.println("madeBy is Valid");
 				validMedeBy=true;
 			}
 			else {
 				System.err.println("madeBy is InValid ");
 			}
-			if(manufacturedBy !=null && manufacturedBy.length()>3 && manufacturedBy.length()<30) {
+			if(validString(manufacturedBy)) {
 				System.out.println("manufacturedBy is Valid");
 				validManufacturedBy=true;
 			}
 			else {
 				System.err.println("manufacturedBy is InValid ");
 			}
-			if(usedBY !=null && usedBY.length()>3 && usedBY.length()<30) {
+			if(validString(usedBY)) {
 				System.out.println("usedBY is Valid");
 				validUsedBy=true;
 			}
 			else {
 				System.err.println("usedBY is InValid ");
 			}
-			if(usedFor !=null && usedFor.length()>3 && usedFor.length()<30) {
+			if(validString(usedFor)) {
 				System.out.println("usedFor is Valid");
 				validUsedFor=true;
 			}
 			else {
 				System.err.println("usedFor is InValid ");
 			}
-			if(cost >5000 && cost<1000000) {
+			if(validPrice(cost)) {
 				System.out.println("cost is Valid");
 				validCost=true;
 			}
 			else {
 				System.err.println("cost is InValid ");
 			}
-			if(weight >0.5 && weight<100) {
+			if(validWeight(weight)) {
 				System.out.println("weight is Valid");
 				validWeight=true;
 			}
 			else {
 				System.err.println("weight is InValid ");
 			}
-			if(id >0 && id<100) {
+			if(validId(id)) {
 				System.out.println("id is Valid");
 				validId=true;
 			}
@@ -117,10 +126,11 @@ public class WeaponServicesImpl implements WeaponServices{
 				System.err.println("manufacturedYear is InValid ");
 			}
 			
-			if(validName && validMaterial && validMedeBy && validManufacturedBy && validUsedBy && validUsedFor && validCost && validWeight && validId && validType && validManufacturedYear)
+			if(valigFlag(validName, validMaterial, validMedeBy, validManufacturedBy, validUsedBy, validUsedFor,validCost,validWeight,validId,validType, validManufacturedYear))
 			{
 				System.out.println("Validation is Complete Save data");
-				return true;
+				boolean saved=weaponRepository.save(dto);
+				return saved;
 			}
 			else {
 				System.err.println("validation not complete not save data");
