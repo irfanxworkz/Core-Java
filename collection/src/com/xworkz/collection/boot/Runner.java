@@ -1,14 +1,21 @@
 package com.xworkz.collection.boot;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.Vector;
 
 public class Runner {
 
 	public static void main(String[] args) {
 		
-		Collection<String> name=new LinkedList<String>();
+		Collection<String> name=new ArrayDeque<String>();
 		String name1="Irfan-Khan", name2="Rahul-420", name3="Karan-Mishra", name4="Nadeem-Ahmed", name5="Jay-singh", name6="Jay-pal", name7="Mohit-kumar", name8="Atul-jaiswal", name9="Aamir-khan", name10="Kartik-sharma";
 		name.add(name1);
 		name.add(name2);
@@ -22,13 +29,12 @@ public class Runner {
 		name.add(name10);
 		int TotalSizeOfString=name.size();
 		System.out.println("1. Total size of string is: "+TotalSizeOfString);
-		
 		name.clear();
 		System.out.println("String size After Clear Method: "+name.size());
 		
 		System.out.println("-------------------------------------------------------------");
 		
-		Collection<Character> character=new LinkedList<Character>();
+		List<Character> character=new LinkedList<Character>();
 		char a='A',b='9',c='C',d='0',e='E',f='F',g='G',h='H',i='I',j='J';
 		character.add(a);
 		character.add(b);
@@ -47,7 +53,7 @@ public class Runner {
 		
 		System.out.println("--------------------------------------------------------------");
 		
-		Collection<Integer> integer=new ArrayList<Integer>();
+		Vector<Integer> integer=new Stack<Integer>();
 		int a1=-2147483648, a2=12546444, a3=139946564, a4=14646466, a5=1646464664, a6=1766446446, a7=186464, a8=19644464, a9=201646464, a10=2147483647;
 		integer.add(a1);
 		integer.add(a2);
@@ -66,7 +72,7 @@ public class Runner {
 	
 		System.out.println("-------------------------------------------------------------");
 		
-		Collection<Long> longValue=new ArrayList<>();
+		Queue<Long> longValue=new PriorityQueue<Long>();
 		long l1=-9223372036854775808L, l2=1234564997890l, l3=123456547890l, l4=1234566467890L, l5=1234565467890L, l6=1234567854590L, l7=12656434567890L, l8=123456789654660L, l9=1234567890123456789L, l10=9223372036854775807L;
 		longValue.add(l1);
 		longValue.add(l2);
@@ -85,7 +91,7 @@ public class Runner {
 		
 		System.out.println("--------------------------------------------------------------");
 		
-		Collection<Float> floatValue=new ArrayList<Float>();
+		Deque<Float> floatValue=new ArrayDeque<Float>();
 		floatValue.add(123456789011234456789999.4f);
 		floatValue.add(123456789012345678901234567890123456799.04f);
 		floatValue.add(13.54f);
@@ -103,7 +109,7 @@ public class Runner {
 		
 		System.out.println("-----------------------------------------------------------");
 		
-		Collection<Double> doubleValue=new ArrayList<>();
+		List<Double> doubleValue=new Stack<>();
 		double d1=1234567891011121314.12345678910d, d2=1234567891011121314.12345678910D, d3=1234567891011121314.12345678910, d4=1234567891011121314.12345678910, d5=1234567891011121314.12345678910, d6=1234567891011121314.12345678910, d7=1234567891011121314.12345678910, d8=1234567891011121314.12345678910, d9=1234567891011121314.12345678910, d10=1234567891011121314.12345678910;
 		doubleValue.add(d1);
 		doubleValue.add(d2);
@@ -122,7 +128,7 @@ public class Runner {
 		
 		System.out.println("-------------------------------------------------------------");
 		
-		Collection<Short> shortValue=new LinkedList<>();
+		Collection<Short> shortValue=new Vector<>();
 		short s1=-32768, s2=-32767, s3=30245, s4=5896, s5=12345, s6=12345, s7=12345, s8=12345, s9=12345, s10=32767;
 		shortValue.add(s1);
 		shortValue.add(s2);
@@ -161,7 +167,7 @@ public class Runner {
 		
 		System.out.println("---------------------------------------------------------");
 
-		Collection<Boolean> booleanValue=new LinkedList<>();
+		List<Boolean> booleanValue=new Vector<>();
 		booleanValue.add(true);
 		booleanValue.add(true);
 		booleanValue.add(true);
