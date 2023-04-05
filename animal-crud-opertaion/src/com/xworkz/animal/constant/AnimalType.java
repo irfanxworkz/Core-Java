@@ -1,4 +1,4 @@
-package com.xworkz.constant;
+package com.xworkz.animal.constant;
 
 public enum AnimalType {
 	

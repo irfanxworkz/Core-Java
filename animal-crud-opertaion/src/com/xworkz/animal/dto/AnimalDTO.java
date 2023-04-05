@@ -3,7 +3,7 @@ package com.xworkz.animal.dto;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.xworkz.constant.AnimalType;
+import com.xworkz.animal.constant.AnimalType;
 
 public class AnimalDTO implements Serializable{
 	

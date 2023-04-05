@@ -1,12 +1,12 @@
 package com.xworkz.animal.boot;
 
+import com.xworkz.animal.constant.AnimalType;
 import com.xworkz.animal.dto.AnimalDTO;
 import com.xworkz.animal.exception.MemoryfullAnimalException;
 import com.xworkz.animal.repositry.AnimalRepositry;
 import com.xworkz.animal.repositry.AnimalRepositryImpl;
 import com.xworkz.animal.services.AnimalServices;
 import com.xworkz.animal.services.AnimalServicesImpl;
-import com.xworkz.constant.AnimalType;
 
 public class AnimalRunner {
 

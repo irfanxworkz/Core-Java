@@ -4,7 +4,8 @@ import com.xworkz.animal.dto.AnimalDTO;
 import com.xworkz.animal.repositry.AnimalRepositry;
 
 import static com.xworkz.animal.util.ValidationUtil.*;
-import com.xworkz.constant.AnimalType;
+
+import com.xworkz.animal.constant.AnimalType;
 
 public class AnimalServicesImpl implements AnimalServices {
 	
