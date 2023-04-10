@@ -1,15 +1,15 @@
 package com.xworkz.collection.boot;
-
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Stack;
-import java.util.Vector;
+import java.util.*;
+//import java.util.ArrayDeque;
+//import java.util.ArrayList;
+//import java.util.Collection;
+//import java.util.Deque;
+//import java.util.LinkedList;
+//import java.util.List;
+//import java.util.PriorityQueue;
+//import java.util.Queue;
+//import java.util.Stack;
+//import java.util.Vector;
 
 public class Runner {
 
@@ -31,6 +31,11 @@ public class Runner {
 		System.out.println("1. Total size of string is: "+TotalSizeOfString);
 		name.clear();
 		System.out.println("String size After Clear Method: "+name.size());
+		
+		Iterator itr=name.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 		
 		System.out.println("-------------------------------------------------------------");
 		
