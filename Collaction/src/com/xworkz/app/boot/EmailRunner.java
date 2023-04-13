@@ -38,59 +38,40 @@ public class EmailRunner {
 		email.add("Wajib@xworkz.com");
 		
 		System.out.println("totall Elements is: "+email.size());
+		System.out.println("All Original Email...");
+		for(String ref:email) {
+			System.out.println(ref);
+		}
 		
+		System.out.println();
+		System.out.println("All Email UpperCaseLetter...");
 		for(String ref:email) {
 			System.out.println(ref.toUpperCase());
 		}
 		
-		System.out.println("Unique domain-----");
-		email.forEach(ref->{
-			if(ref.endsWith("@xworkz.com")) {
-				System.out.println(ref);
-			}
-			
-				
-		});
-		
 		System.out.println();
 		System.out.println("Print Unique domain-----");
-		email.forEach(ref->{
-			if(ref.endsWith("@yahoo.com")) {
-				System.out.println(ref);
-			}
-			
-				
-		});
+		email.stream()
+		.filter(ref -> ref.endsWith("@yahoo.com"))
+		.forEach(System.out::println);
 		
 		System.out.println();
 		System.out.println("Print gmail domain-----");
-		email.forEach(ref->{
-			if(ref.endsWith("@gmail.com")) {
-				System.out.println(ref);
-			}
-			
-				
-		});
+		email.stream()
+		.filter(ref -> ref.endsWith("@gmail.com"))
+		.forEach(System.out::println);
 		
 		System.out.println();
 		System.out.println("Print xworkz domain-----");
-		email.forEach(ref->{
-			if(ref.endsWith("@xworkz.com")) {
-				System.out.println(ref);
-			}
-			
-				
-		});
+		email.stream()
+		.filter(ref -> ref.endsWith("@xworkz.com"))
+		.forEach(System.out::println);
 		
 		System.out.println();
 		System.out.println("Print All domain not gmail and xworkz");
-		email.forEach(ref->{
-			if(!ref.endsWith("@xworkz.com") && !ref.endsWith("@gmail.com")) {
-				System.out.println(ref);
-			}
-			
-				
-		});
+		email.stream()
+		.filter(ref -> !ref.endsWith("@gmail.com") && !ref.endsWith("@xworkz.com"))
+		.forEach(System.out::println);
 
 	}
 
