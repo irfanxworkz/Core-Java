@@ -53,25 +53,25 @@ public class EmailRunner {
 		System.out.println("Print Unique domain-----");
 		email.stream()
 		.filter(ref -> ref.endsWith("@yahoo.com"))
-		.forEach(System.out::println);
+		.forEach(ref->System.out.println(ref));
 		
 		System.out.println();
 		System.out.println("Print gmail domain-----");
 		email.stream()
 		.filter(ref -> ref.endsWith("@gmail.com"))
-		.forEach(System.out::println);
+		.forEach(ref->System.out.println(ref));
 		
 		System.out.println();
 		System.out.println("Print xworkz domain-----");
 		email.stream()
 		.filter(ref -> ref.endsWith("@xworkz.com"))
-		.forEach(System.out::println);
+		.forEach(ref->System.out.println(ref));
 		
 		System.out.println();
 		System.out.println("Print All domain not gmail and xworkz");
 		email.stream()
 		.filter(ref -> !ref.endsWith("@gmail.com") && !ref.endsWith("@xworkz.com"))
-		.forEach(System.out::println);
+		.forEach(ref->System.out.println(ref));
 
 	}
 
