@@ -1,6 +1,7 @@
 package com.xworkz.app.boot;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 public class EmailRunner {
 
@@ -50,10 +51,12 @@ public class EmailRunner {
 		}
 		
 		System.out.println();
-		System.out.println("Print Unique domain-----");
-		email.stream()
-		.filter(ref -> ref.endsWith("@yahoo.com"))
-		.forEach(ref->System.out.println(ref));
+		System.out.println("print unique domain");
+		email.stream().map(e->e.split("@")[1]).collect(Collectors.toSet()).forEach(e->System.out.println(e));
+		
+		System.out.println();
+		System.out.println("print email without domain");
+		email.stream().map(e->e.split("@")[0]).collect(Collectors.toSet()).forEach(e->System.out.println(e));
 		
 		System.out.println();
 		System.out.println("Print gmail domain-----");
